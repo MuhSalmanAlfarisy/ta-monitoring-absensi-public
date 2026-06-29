@@ -1,0 +1,371 @@
+/**
+ * PAGE-SPECIFIC STYLES
+ * Override and specific styling for individual pages
+ */
+
+@layer utilities {
+  /* Settings Page Specific */
+  .settings-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .settings-section-card {
+    padding: 1.5rem;
+    border-width: 0;
+  }
+
+  .settings-section-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  /* Device Status Grid */
+  .device-status-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #F5F5F5;
+  }
+
+  @media (min-width: 768px) {
+    .device-status-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .dark .device-status-grid {
+    background-color: #374151;
+  }
+
+  /* Device Status Item */
+  .device-status-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .device-status-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+
+  .device-status-value {
+    font-size: 0.875rem;
+    color: #0C5E3C;
+  }
+
+  .dark .device-status-value {
+    color: #78C2A4;
+  }
+
+  /* ATT Log History - Settings Page */
+  .attlog-history {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .attlog-history-item {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+  }
+
+  .dark .attlog-history-item {
+    background-color: #374151;
+    border-color: #374151;
+  }
+
+  .attlog-timestamp {
+    font-size: 0.875rem;
+    color: #0C5E3C;
+  }
+
+  .dark .attlog-timestamp {
+    color: #78C2A4;
+  }
+
+  .attlog-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  /* Password Change Section */
+  .password-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .password-hint {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+
+  .password-requirements {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .password-requirement {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+
+  .password-requirement.met {
+    color: #10b981;
+  }
+
+  /* Login Page Specific */
+  .login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, #0C5E3C, #78C2A4);
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 28rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  }
+
+  .dark .login-card {
+    background-color: #1f2937;
+  }
+
+  /* Dashboard Main Page */
+  .dashboard-stats-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .dashboard-stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .dashboard-stats-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .dashboard-chart-container {
+    margin-top: 1.5rem;
+    min-height: 300px;
+  }
+
+  @media (min-width: 768px) {
+    .dashboard-chart-container {
+      min-height: 400px;
+    }
+  }
+
+  /* Data Jamaah Page - Details View */
+  .jamaah-list-header {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .jamaah-list-header {
+      display: grid;
+      grid-template-columns: 5fr 3fr 4fr;
+      gap: 1rem;
+    }
+  }
+
+  .jamaah-list-item {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-duration: 200ms;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .jamaah-list-item {
+      grid-template-columns: 5fr 3fr 4fr;
+    }
+  }
+
+  /* Riwayat Kehadiran Grid */
+  .riwayat-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .riwayat-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .riwayat-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .riwayat-grid-item {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border-width: 2px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 200ms;
+    border-color: #e5e7eb;
+  }
+
+  .riwayat-grid-item:hover {
+    border-color: #0C5E3C;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
+
+  /* Laporan Page */
+  .report-filters {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .report-filters {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .report-filters {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  /* Empty State */
+  .empty-state {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .empty-state-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    background-color: #f3f3f5;
+  }
+
+  .dark .empty-state-icon {
+    background-color: #1f2937;
+  }
+
+  .empty-state-text {
+    color: #4b5563;
+  }
+
+  .dark .empty-state-text {
+    color: #9ca3af;
+  }
+
+  /* Notification Settings */
+  .notification-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #F5F5F5;
+  }
+
+  .dark .notification-item {
+    background-color: #374151;
+  }
+
+  .notification-info {
+    flex: 1;
+  }
+
+  .notification-title {
+    font-size: 0.875rem;
+    color: #374151;
+  }
+
+  .dark .notification-title {
+    color: #d1d5db;
+  }
+
+  .notification-description {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+
+  /* Dark Mode Toggle - Settings Page */
+  .theme-toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(to right, rgb(12 94 60 / 0.1), rgb(120 194 164 / 0.1));
+    border-width: 2px;
+    border-color: #0C5E3C;
+  }
+
+  .dark .theme-toggle-container {
+    border-color: #78C2A4;
+  }
+
+  .theme-toggle-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .theme-toggle-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0C5E3C;
+    color: white;
+  }
+
+  .dark .theme-toggle-icon {
+    background-color: #78C2A4;
+  }
+}

@@ -1,0 +1,9 @@
+masjidnurutaqwa.my.id {
+    # Arahkan domain utama ke container FRONTEND (port 80)
+    reverse_proxy frontend:80
+}
+
+api.masjidnurutaqwa.my.id {
+    # Arahkan domain API ke container BACKEND (port 8000)
+    reverse_proxy backend:8000
+}

@@ -1,0 +1,270 @@
+/**
+ * LAYOUT STYLES
+ * Header, Sidebar, Grid, Container, Page Layout
+ */
+
+@layer utilities {
+  /* Main Container */
+  .container-main {
+    min-height: 100vh;
+    background-color: #F5F5F5;
+  }
+
+  .dark .container-main {
+    background-color: #111827;
+  }
+
+  /* Page Wrapper */
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* Sidebar Layout */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    z-index: 50;
+    transition-property: transform;
+    transition-duration: 300ms;
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+  }
+
+  .dark .sidebar {
+    background-color: #1f2937;
+  }
+
+  .sidebar-hidden {
+    transform: translateX(-100%);
+  }
+
+  .sidebar-visible {
+    transform: translateX(0);
+  }
+
+  /* Responsive: Always visible on large screens */
+  @media (min-width: 1024px) {
+    .sidebar {
+      transform: translateX(0) !important;
+    }
+  }
+
+  /* Sidebar Overlay (Mobile) */
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgb(0 0 0 / 0.5);
+    z-index: 40;
+  }
+
+  /* Content Area with Sidebar */
+  .content-with-sidebar {
+    margin-left: 0;
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+
+  @media (min-width: 1024px) {
+    .content-with-sidebar {
+      margin-left: 16rem;
+    }
+  }
+
+  /* Header */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background-color: white;
+    border-bottom-width: 1px;
+    padding: 1rem 1.5rem;
+  }
+
+  .dark .header {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+
+  /* Grid Layouts */
+  .grid-1 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .grid-3 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .grid-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .grid-4 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .grid-4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* Auto Grid - Responsive */
+  .grid-auto {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  /* Flex Layouts */
+  .flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .flex-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  /* Section Spacing */
+  .section {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-lg {
+    margin-bottom: 2rem;
+  }
+
+  .section-xl {
+    margin-bottom: 3rem;
+  }
+
+  /* Content Max Width */
+  .content-max {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Card Grid - Specific for dashboard cards */
+  .card-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .card-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* Details View Layout - Windows Explorer Style */
+  .details-view-header {
+    background-color: #F5F5F5;
+    border-bottom-width: 1px;
+    padding: 0.75rem 1.5rem;
+    border-color: #d1d5db;
+  }
+
+  .dark .details-view-header {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+
+  .details-view-row {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-duration: 200ms;
+  }
+
+  .details-view-row:hover {
+    background-color: rgb(120 194 164 / 0.05);
+  }
+
+  /* Responsive Table Container */
+  .table-container {
+    overflow-x: auto;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .table-container {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  /* Sticky Header for Scrollable Content */
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+  }
+
+  .dark .sticky-header {
+    background-color: #1f2937;
+  }
+}

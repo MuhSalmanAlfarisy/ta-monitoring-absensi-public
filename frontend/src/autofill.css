@@ -1,0 +1,9 @@
+/* Safely override browser autofill behavior for dark mode inputs */
+.dark-autofill:-webkit-autofill,
+.dark-autofill:-webkit-autofill:hover, 
+.dark-autofill:-webkit-autofill:focus, 
+.dark-autofill:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #374151 inset !important;
+    -webkit-text-fill-color: #F3F4F6 !important;
+    caret-color: white !important;
+}

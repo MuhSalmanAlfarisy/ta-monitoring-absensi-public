@@ -1,0 +1,125 @@
+/* Laporan Statistik Responsive Styles */
+
+/* Header Responsive */
+.laporan-title {
+  font-size: 1.25rem;
+}
+
+.laporan-subtitle {
+  font-size: 0.75rem;
+}
+
+.laporan-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Insight Cards Responsive */
+.insight-card-label {
+  font-size: 0.625rem;
+}
+
+.insight-card-value {
+  font-size: 1rem;
+}
+
+.insight-card-subtitle {
+  font-size: 0.625rem;
+}
+
+.insight-card-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.insight-card-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Charts Grid */
+.charts-grid-laporan {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+/* Chart Titles */
+.chart-title {
+  font-size: 0.875rem;
+}
+
+.chart-subtitle {
+  font-size: 0.75rem;
+}
+
+/* Chart Container Mobile Optimization */
+.chart-container-mobile {
+  height: 220px;
+}
+
+/* Tablet and up (640px) */
+@media (min-width: 640px) {
+  .laporan-title {
+    font-size: 1.875rem;
+  }
+
+  .laporan-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .insight-card-label {
+    font-size: 0.875rem;
+  }
+
+  .insight-card-value {
+    font-size: 2rem;
+  }
+
+  .insight-card-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .insight-card-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .insight-card-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .chart-title {
+    font-size: 1.125rem;
+  }
+
+  .chart-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .chart-container-mobile {
+    height: 280px;
+  }
+}
+
+/* Desktop (768px and up) */
+@media (min-width: 768px) {
+  .laporan-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .chart-container-mobile {
+    height: 300px;
+  }
+}
+
+/* Large Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .charts-grid-laporan {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
