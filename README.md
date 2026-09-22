@@ -11,4 +11,4 @@ The project focuses on developing a **cloud-based attendance monitoring system**
 * **Frontend:** React, TypeScript
 * **Backend:** FastAPI
 * **Database:** MySQL
-* **Infrastructure:** Docker
+* **Infrastructure:** Docker, Nginx, Caddy
